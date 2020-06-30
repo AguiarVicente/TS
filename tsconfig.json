@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "outFile": "./dist/tipos/tipos.js",
+    "module": "system"
+  }
+}
