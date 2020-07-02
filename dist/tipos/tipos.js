@@ -1,3 +1,8 @@
+function pessoa(p) {
+    return "Eu me chamo: " + p.nome + " com idade: " + p.idade + " e com escolaridade n\u00EDvel " + p.nivel;
+}
+var ser = { nome: 'Nil', idade: 34, nivel: 'Superior' };
+console.log(pessoa(ser));
 var lista = [1, 2, 3];
 console.log("Um array " + lista);
 var somarValor = 'Somar valor';
