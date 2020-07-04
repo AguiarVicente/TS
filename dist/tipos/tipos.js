@@ -1,3 +1,5 @@
+var basico = 'Teste TS! (WEB) 2';
+console.log(basico);
 function pessoa(p) {
     return "Eu me chamo: " + p.nome + " com idade: " + p.idade + " e com escolaridade n\u00EDvel " + p.nivel;
 }
