@@ -1,0 +1,23 @@
+{
+  "name": "curso_typescript",
+  "version": "1.0.0",
+  "description": "## Juntamente a este curso será feito REACT e REACT NATIVE",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AguiarVicente/curso_typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AguiarVicente/curso_typescript/issues"
+  },
+  "homepage": "https://github.com/AguiarVicente/curso_typescript#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
