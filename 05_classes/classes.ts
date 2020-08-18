@@ -80,7 +80,7 @@ class Carro {
     public modelo: string, 
     private velocidadeMaxima: number = 200) {}
 
-  private alterarVelocidade(delta: number): number{
+  protected alterarVelocidade(delta: number): number{
     const novaVelocidade = this.velocidadeAtual + delta
     const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima
 
@@ -119,3 +119,134 @@ console.log(carro1.frear())
 
 // carro1.alterarVelocidade(150)
 // console.log(carro1.velocidadeAtual)
+
+
+// herança => reuso de código
+class Ferrari extends Carro {
+  constructor(modelo: string, velocidadeMaxima: number){
+    super('Ferrari', modelo, velocidadeMaxima)
+    // ... pode-se executar mais códigos aqui
+  }
+
+  public acelerar(): number{
+    return this.alterarVelocidade(20)
+  }
+
+  public frear():number {
+    return this.alterarVelocidade(-15)
+  }
+}
+
+const f40 = new Ferrari('F40', 324)
+console.log(`${f40.marca} ${f40.modelo}`)
+console.log(f40.acelerar())
+console.log(f40.acelerar())
+console.log(f40.acelerar())
+console.log(f40.frear())
+console.log(f40.frear())
+console.log(f40.frear())
+
+
+//Getter & Setters
+class Pessoa {
+  private _idade: number = 0
+
+  get idade(): number{
+    return this._idade
+  }
+
+  set idade(valor: number){
+    if(valor >= 0 && valor <= 120){
+      this._idade = valor
+    }
+  }
+}
+
+const pessoa1 = new Pessoa
+pessoa1.idade = 10
+console.log(pessoa1.idade)
+
+pessoa1.idade = -3
+console.log(pessoa1.idade)
+
+// Membros estáticos -> pertence a classe não a instância do objeto
+// Atributos e métodos estáticos
+
+class Matematica {
+  static PI: number = 3.1416
+
+  static areaCirc(raio: number): number {
+    return Matematica.PI * raio * raio
+  }
+}
+
+// const m1 = new Matematica()
+// m1.PI = 4.2
+// console.log(m1.areaCirc(4))
+
+console.log(Matematica.areaCirc(4))
+// console.log(new Matematica().areaCirc(4)) // forma de chamar sem static
+
+// classe abstratas
+abstract class Calculo {
+  protected resultado = 0
+  abstract executar(...numeros: Array<number>): void
+
+  getResultado(): number {
+    return this.resultado
+  }
+}
+
+class Soma extends Calculo {
+  executar(...numeros: Array<number>): void {
+    this.resultado = numeros.reduce( (total, atual) => total + atual)
+  }
+}
+
+class Multiplicacao extends Calculo{
+  executar(...numeros: Array<number>): void {
+    this.resultado = numeros.reduce( (total, atual) => total * atual)
+  }
+}
+// aqui é um exemplo de polimorfismo
+let c1: Calculo = new Soma()
+c1.executar(2, 3, 4, 5)
+console.log(c1.getResultado())
+
+c1 = new Multiplicacao()
+c1.executar(1, 2, 3, 4, 5)
+console.log(c1.getResultado())
+
+// padrão de projeto singleton
+// construtor privado
+class Unico {
+  private static instance: Unico = new Unico
+  private constructor(){}
+
+  static getInstance(): Unico{
+    return Unico.instance // ou this.instance
+  }
+
+  agora(): Date {
+    return new Date
+  }
+}
+
+// const errado = new Unico()
+// errado.agora()
+
+console.log(Unico.getInstance().agora().toLocaleDateString())
+
+// Atributos somente leitura (readonly)
+class Aviao {
+  public readonly modelo: string
+
+  constructor(modelo: string, public readonly prefixo: string){
+    this.modelo = modelo
+  }
+}
+
+const turboHelice = new Aviao('TU-114', 'PT-ABC')
+// turboHelice.modelo = 'DC-8'
+// turboHelice.prefixo = 'PT-DEF'
+console.log(turboHelice)

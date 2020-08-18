@@ -1,19 +1,19 @@
 "use strict";
-var canal = 'Gaveta';
-var inscritos = 610234;
+let canal = 'Gaveta';
+let inscritos = 610234;
 // canal = inscritos
-console.log("Canal = " + canal);
+console.log(`Canal = ${canal}`);
 // let nome: string = 'Pedro'
-console.log("Nome = " + nome);
+console.log(`Nome = ${nome}`);
 function soma(a, b) {
     return a + b;
 }
-var qualquerCoisa;
+let qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'ABC';
 function saudar(isManha, horas) {
-    var a = 1;
-    var saudacao;
+    let a = 1;
+    let saudacao;
     if (isManha) {
         saudacao = 'Bom dia!';
     }
