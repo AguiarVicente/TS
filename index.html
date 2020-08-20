@@ -8,11 +8,28 @@
 </head>
 <body>
   
+  <script src="node_modules/systemjs/dist/system.js"></script>
   <!-- <script src="01_introducao/basico.js"></script> -->
   <!-- <script src="02_tipos/tipo.js"></script> -->
   <!-- <script src="03_compilador/compilador.js"></script> -->
   <!-- <script src="04_ecmascript/ecmascript.js"></script> -->
   <!-- <script src="05_classes/classes.js"></script> -->
-  <script src="05_classes/desafio.js"></script>
+  <!-- <script src="05_classes/desafio.js"></script> -->
+  <!-- <script src="07_namespaces/geometriaRec.js"></script>
+  <script src="07_namespaces/geometriaCirc.js"></script>
+  <script src="07_namespaces/namespaces.js"></script> -->
+  <!-- <script src="08_modulos/modulos.js"></script> -->
+  <script>
+    SystemJS.config({
+      baseUrl: '/08_modulos',
+      packages: {
+        '/08_modulos': {
+          defaultJSExtension: true
+        }
+      }
+    })
+
+    SystemJS.import('./08_modulos/modulos.js')
+  </script>
 </body>
 </html>

@@ -19,5 +19,9 @@
   "homepage": "https://github.com/AguiarVicente/curso_typescript#readme",
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "@types/node": "^14.6.0",
+    "systemjs": "^0.21.5"
   }
 }
