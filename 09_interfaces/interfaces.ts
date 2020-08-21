@@ -41,7 +41,7 @@ const meucliente = new Cliente()
 meucliente.nome = 'Han'
 saudarComOla(meucliente)
 meucliente.saudar('Solo')
-console.log(meucliente.ultimaCompra.toDateString())
+console.log(meucliente.ultimaCompra.toLocaleDateString())
 
 interface FuncaoCalculo {
   (a: number, b: number): number

@@ -31,7 +31,7 @@ const meucliente = new Cliente();
 meucliente.nome = 'Han';
 saudarComOla(meucliente);
 meucliente.saudar('Solo');
-console.log(meucliente.ultimaCompra.toDateString());
+console.log(meucliente.ultimaCompra.toLocaleDateString());
 let potencia;
 potencia = function (base, expoente) {
     return Array(expoente).fill(base).reduce((a, b) => a * b);
