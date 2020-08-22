@@ -15,13 +15,13 @@ let qualquerCoisa
 qualquerCoisa = 12
 qualquerCoisa = 'ABC'
 
-function saudar(isManha: boolean, horas: number): string | null {
-  let a = 1
-  let saudacao: string
-  if(isManha){
-    saudacao = 'Bom dia!'
-  }else {
-    saudacao = 'Tenha uma boa vida!'
-  }
-  return saudacao
-}
+// function saudar(isManha: boolean, horas: number): string | null {
+//   let a = 1
+//   let saudacao: string
+//   if(isManha){
+//     saudacao = 'Bom dia!'
+//   }else {
+//     saudacao = 'Tenha uma boa vida!'
+//   }
+//   return saudacao
+// }

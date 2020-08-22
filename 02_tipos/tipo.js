@@ -68,9 +68,9 @@ function multiplicar(numA, numB) {
 // console.log(multiplicar(2, 'Bia'))
 console.log(multiplicar(4.7, 9));
 // atribuir funções a variáveis
-const teste = function (a, b) {
-    return false;
-};
+// const teste = function (a: number, b: number): boolean {
+//   return false
+// }
 // tipo função -> importante a ordem dos parâmetros (tipos declarados) e tipo de retorno
 let calculo;
 // calculo = digaOi
