@@ -145,37 +145,4 @@ console.log(mapa.obter(2));
 mapa.imprimir();
 mapa.limpar();
 mapa.imprimir();
-class Mapeando {
-    constructor() {
-        this.itens = new Array();
-    }
-    obter(chave) {
-        const resultado = this.itens.filter((item => item.chave === chave));
-        return resultado ? resultado[0] : null;
-    }
-    colocar(par) {
-        const encontrar = this.obter(par.chave);
-        if (encontrar) {
-            encontrar.valor = par.valor;
-        }
-        else {
-            this.itens.push(par);
-        }
-    }
-    limpar() {
-        this.itens = new Array();
-    }
-    imprimir() {
-        console.log(this.itens);
-    }
-}
-const mapear = new Mapeando();
-mapear.colocar({ chave: 1, valor: 'Pedro' });
-mapear.colocar({ chave: 2, valor: 'Rebeca' });
-mapear.colocar({ chave: 3, valor: 'Maria' });
-mapear.colocar({ chave: 1, valor: 'Gustavo' });
-console.log(mapear.obter(2));
-mapear.imprimir();
-mapear.limpar();
-mapear.imprimir();
 //# sourceMappingURL=genericos.js.map
