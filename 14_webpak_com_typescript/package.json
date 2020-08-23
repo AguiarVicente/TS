@@ -1,0 +1,25 @@
+{
+  "name": "webpak_com_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.5.1",
+    "jquery": "^3.5.1",
+    "ts-loader": "^8.0.2",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^6.0.3",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
