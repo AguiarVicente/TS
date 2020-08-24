@@ -1,21 +1,9 @@
 "use strict";
-var Geometria;
-(function (Geometria) {
-    let Area;
-    (function (Area) {
-        const PI = 3.14;
-        function circunferencia(raio) {
-            return PI * Math.pow(raio, 2);
-        }
-        Area.circunferencia = circunferencia;
-        function retangulo(base, altura) {
-            return base * altura;
-        }
-        Area.retangulo = retangulo;
-    })(Area = Geometria.Area || (Geometria.Area = {}));
-})(Geometria || (Geometria = {}));
-const PI = 2.99;
+// comentário interpretado pelo ts (importando namespaces)
+///<reference path="geometriaCirc.ts" />
+///<reference path="geometriaRec.ts" />
+// const PI: number = 2.99
 console.log(Geometria.Area.circunferencia(10));
-console.log(Geometria.Area.retangulo(10, 20));
-console.log(PI);
+console.log(Geometria.Area.retangulo(12, 20));
+// console.log(PI)
 //# sourceMappingURL=namespaces.js.map
